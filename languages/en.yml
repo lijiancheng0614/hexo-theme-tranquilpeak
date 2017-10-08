@@ -53,15 +53,15 @@ global:
 pagination:
     page: "page %d"
     of: "of %d"
-    newer_posts: "NEWER POSTS"
-    older_posts: "OLDER POSTS"
-    previous: "PREVIOUS"
-    next: "NEXT"
+    newer_posts: "Newer posts"
+    older_posts: "Older posts"
+    previous: "Previous"
+    next: "Next"
 
 post:
     no_title : "no title"
     categorized_in: "in"
-    tagged_in: "TAGGED IN"
+    tagged_in: "Tagged in"
     toc: "Table of Contents"
     read_more: "Continue reading"
     go_to_website: "Go to website"
@@ -69,6 +69,6 @@ post:
 
 author:
     # Your biography (Markdown and HTML supported)
-    bio: ""
+    bio: "lijiancheng0614@gmail.com"
     # Your job
     job: ""
