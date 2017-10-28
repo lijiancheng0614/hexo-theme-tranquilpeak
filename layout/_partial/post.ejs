@@ -3,15 +3,8 @@
     var postContent = post.content;
 
     // Generate and insert table of contents in post content
-    if ((/<!--(\s*)[t|T][o|O][c|C](\s*)-->/).test(postContent)) {
-        if (__('post.toc')) {
-            tableOfContents = '<h1 id=\"table-of-contents\">' + __('post.toc') + '</h1>';
-        } else {
-            tableOfContents = '<span id="table-of-contents"></span>';
-        }
-        tableOfContents += toc(postContent, {list_number: false})
-        postContent = postContent.replace(/<!--(\s*)[t|T][o|O][c|C](\s*)-->/, tableOfContents)
-    }
+    tableOfContents = '<span id="table-of-contents"></span>';
+    tableOfContents += toc(postContent, {list_number: false})
     // Replace `<!-- endcontent -->` by `</div>` and `<!-- content -->` by `</div class="main-content-wrap">`
     // it's an hack to insert html tag without
     // having auto delete or auto closed by the markdown render engine
@@ -29,6 +22,7 @@
     <% } %>
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
+            <%- tableOfContents %>
             <%- postContent %>
             <%- partial('post/gallery') %>
         </div>
