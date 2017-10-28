@@ -7,15 +7,34 @@
         data-message-one="<%= __('global.tags_found.one') %>"
         data-message-other="<%= __('global.tags_found.other') %>"></h4>
 
-        <section>
-        <% site.tags.sort('name').each(function(tag) { %>
-            <a class="tag tag--primary tag--small" href="<%= '#' + tag.name + '-list' %>" data-tag="<%= tag.name.toLowerCase() %>">
-                <%= tag.name %>
+    <section>
+        <% max = site.tags.first.length;
+            min = max;
+            site.tags.each(function(tag) {
+                max = Math.max(max, tag.length)
+                min = Math.min(min, tag.length)
+            });
+            diff = max - min;
+        site.tags.sort('-length').each(function(tag) {
+            temp = (tag.length - min) * 36 / diff;
+            base = parseInt(temp / 4);
+            remain = temp % 4;
+            if (remain == 0) {
+                size = base + 9;
+            }
+            else if (remain == 1 || remain == 2) {
+                size = base + 9.5;
+            }
+            else {
+                size = base + 10;
+            } %>
+            <a class="tag tag--primary tag--small" href="<%= '#' + tag.name + '-list' %>" data-tag="<%= tag.name.toLowerCase() %>" style="font-size: <%= size %>pt">
+                <%= tag.name %><sup><%= tag.length %></sup>
             </a>
         <% }); %>
     </section>
     <section class="boxes">
-        <% site.tags.sort('name').each(function(tag) { %>
+        <% site.tags.sort('-length').each(function(tag) { %>
             <div id="<%= tag.name + '-list' %>" class="archive box" data-tag="<%= tag.name.toLowerCase() %>">
                 <h4 class="archive-title">
                     <a class="link-unstyled" href="<%- url_for(config.tag_dir + '/' + tag.slug) %>">
@@ -23,13 +42,13 @@
                     </a>
                 </h4>
                 <ul class="archive-posts">
-                    <% site.tags.findOne({'name': tag.name}).posts.each(function(post) { %>
+                    <% site.tags.findOne({'name': tag.name}).posts.sort('date', 'desc').each(function(post) { %>
                         <li class="archive-post">
                             <a class="archive-post-title" href="<%- url_for(post.path) %>">
                                 <%= post.title || '(' + __('post.no_title') + ')' %>
                             </a>
                             <span class="archive-post-date">
-                                <%= ' - ' + post.date.locale(page.lang).format(__('date_format')).toLowerCase() %>
+                                <%= ' - ' + post.date.locale(page.lang).format(__('date_format')) %>
                             </span>
                         </li>
                     <% }) %>
