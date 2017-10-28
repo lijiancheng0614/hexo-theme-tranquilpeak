@@ -8,6 +8,11 @@
     </time>
     <% if ((post.categories) && (post.categories.length > 0)) { %>
         <span><%= __('post.categorized_in')  %> </span>
-        <%- partial('category', {categories: post.categories})%>
+        <strong><%- partial('category', {categories: post.categories})%></strong>
+    <% } %>
+    <% if ((post.tags) && (post.tags.length > 0)) { %>
+        / 
+        <span class="text-color-light text-small"><%= __('post.tagged_in') %></span>
+        <strong><%- partial('tag', {tags: post.tags})%></strong>
     <% } %>
 </div>
