@@ -238,3 +238,5 @@ sharing_options:
     #     title: "Odnoklassniki"
     #     icon: "fa-odnoklassniki"
     #     url: "https://connect.ok.ru/offer?url={{post.permalink}}"
+
+mathjax: true

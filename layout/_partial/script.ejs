@@ -3,7 +3,9 @@
 <%- js('assets/js/jquery.fancybox.js') %>
 <%- js('assets/js/jquery.fancybox-thumbs.js') %>
 <%- js('assets/js/tranquilpeak.js') %>
-<!--SCRIPTS END-->
+<!-- MathJax Begin -->
+<%- partial('mathjax') %>
+<!-- MathJax End -->
 <% if (post.comments) { %>
     <% if (theme.disqus_shortname) { %>
         <script>
@@ -46,3 +48,4 @@
         var algoliaIndex = algoliaClient.initIndex('<%= config.algolia.indexName %>');
     </script>
 <% } %>
+<!--SCRIPTS END-->
