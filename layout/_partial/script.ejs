@@ -7,6 +7,17 @@
 <%- partial('mathjax') %>
 <!-- MathJax End -->
 <%- partial('backtotop') %>
+<% if (is_post() && theme.sharing_options.weixin) { %>
+    <script type="text/javascript">
+        $('#qrcode').qrcode({
+            text: "<%= post.permalink %>"
+        });
+        $("#show_qrcode").fancybox({
+            title : "<%= __('global.share_on_weixin') %>"
+        });
+    </script>
+<% } %>
+</script>
 <% if (post.comments) { %>
     <% if (theme.disqus_shortname) { %>
         <script>

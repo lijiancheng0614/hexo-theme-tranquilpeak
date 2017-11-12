@@ -23,6 +23,7 @@ global:
     share_on_twitter: "Поделиться в Twitter"
     share_on_google_plus: "Поделиться в Google+"
     share_on_weibo: "Поделиться в Weibo"
+    share_on_weixin: "Поделиться в Weixin"
     share_on_qq: "Поделиться в QQ"
     share_on_qzone: "Поделиться в Qzone"
     share_on_renren: "Поделиться в Renren"

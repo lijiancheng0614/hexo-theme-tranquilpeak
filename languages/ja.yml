@@ -23,6 +23,7 @@ global:
     share_on_twitter: "Twitterで共有"
     share_on_google_plus: "Google+で共有"
     share_on_weibo: "Weiboで共有"
+    share_on_weixin: "Weixinで共有"
     share_on_qq: "QQで共有"
     share_on_qzone: "Qzoneで共有"
     share_on_renren: "Renrenで共有"

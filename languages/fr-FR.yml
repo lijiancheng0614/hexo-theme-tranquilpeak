@@ -21,6 +21,7 @@ global:
     share_on_twitter: "Partager sur Twitter"
     share_on_google_plus: "Partager sur Google+"
     share_on_weibo: "Partager sur Weibo"
+    share_on_weixin: "Partager sur Weixin"
     share_on_qq: "Partager sur QQ"
     share_on_qzone: "Partager sur Qzone"
     share_on_renren: "Partager sur Renren"

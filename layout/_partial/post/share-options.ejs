@@ -3,11 +3,18 @@
     <ul class="share-options">
         <% for(var option in theme.sharing_options)  {%>
             <% var icon = theme.sharing_options[option].icon %>
-            <% var url = generate_sharing_link(post, theme.sharing_options[option].url) %>
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="<%= url %>">
-                    <i class="fa <%= icon %>"></i><span><%= __('global.share_on_' + option) %></span>
-                </a>
+                <% if (option === "weixin") { %>
+                    <a class="share-option-btn" target="new" href="#qrcode" id="show_qrcode">
+                        <i class="fa <%= icon %>"></i><span><%= __('global.share_on_weixin') %></span>
+                    </a>
+                    <div id="qrcode" style="display:none"></div>
+                <% } else { %>
+                    <% var url = generate_sharing_link(post, theme.sharing_options[option].url) %>
+                    <a class="share-option-btn" target="new" href="<%= url %>">
+                        <i class="fa <%= icon %>"></i><span><%= __('global.share_on_' + option) %></span>
+                    </a>
+                <% } %>
             </li>
         <% } %>
     </ul>

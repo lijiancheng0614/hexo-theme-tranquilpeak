@@ -217,6 +217,9 @@ sharing_options:
         title: "Weibo"
         icon: "fa-weibo"
         url: "http://service.weibo.com/share/share.php?&title={{post.permalink}}"
+    weixin:
+        title: "Weixin"
+        icon: "fa-weixin"
     # qq:
     #     title: "QQ"
     #     icon: "fa-qq"

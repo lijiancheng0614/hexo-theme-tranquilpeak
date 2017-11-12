@@ -23,6 +23,7 @@ global:
     share_on_twitter: "Compartir en Twitter"
     share_on_google_plus: "Compartir en Google+"
     share_on_weibo: "Compartir en Weibo"
+    share_on_weixin: "Compartir en Weixin"
     share_on_qq: "Compartir en QQ"
     share_on_qzone: "Compartir en Qzone"
     share_on_renren: "Compartir en Renren"
