@@ -60,15 +60,16 @@ h6 {
     }
 }
 
-p {
-    margin: 0 0 1.5em 0;
-}
-
+ul li p,
+ol li p,
+dl li p,
 ul,
 ol,
-dl {
+dl,
+p {
     margin: 0 0 0.5em 0;
 }
+
 
 a {
     &,
@@ -78,6 +79,7 @@ a {
         cursor:          pointer;
         color:           map-get($colors, link);
         text-decoration: none;
+        word-break:      break-all;
     }
     &:hover {
         color:           map-get($colors, link);
@@ -86,7 +88,6 @@ a {
 }
 
 table {
-    width:           100%;
     background:      transparent;
     border-collapse: collapse;
     border-spacing:  0;
@@ -95,10 +96,12 @@ table {
     th {
         padding:       5px 10px;
         font-weight:   bold;
-        border-bottom: 2px solid #909ba2;
+        border: 1px solid #eef2f8;
+        border-bottom: 1px solid #909ba2;
     }
     td {
         padding: 5px 10px;
+        border: 1px solid #eef2f8;
     }
     tr {
         &:nth-child(2n) {
@@ -108,7 +111,6 @@ table {
 }
 
 hr {
-    margin:     1.5em 0 0;
     outline:    none;
     border:     none;
     border-top: 1px solid #eef2f8;

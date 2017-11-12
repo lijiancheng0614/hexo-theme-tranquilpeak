@@ -25,8 +25,8 @@ $font-families: (
 );
 
 // equal to 15px
-$font-size-base:      1.6rem;
-$font-color-base:     #5d686f;
+$font-size-base:      1.5rem;
+$font-color-base:     #333;
 $line-height-base:    1.9em;
 $letter-spacing-base: 0.01em;
 
@@ -215,7 +215,7 @@ $image-gallery-photos-margin: 2px;
 
 // Main content
 $main-content: (
-    'max-width':          750px,
+    'max-width':          960px,
     'padding-right-left': 20px,
 );
 
