@@ -99,7 +99,7 @@
                 display:    block;
                 width:      $post-thumbnail-image-width;
                 height:     $post-thumbnail-image-width;
-                object-fit: cover;
+                object-fit: scale-down;
                 overflow:   hidden;
             }
         }
@@ -117,7 +117,7 @@
                 display:    block;
                 width:      $post-thumbnail-image-width;
                 height:     $post-thumbnail-image-width;
-                object-fit: cover;
+                object-fit: scale-down;
                 overflow:   hidden;
             }
         }
