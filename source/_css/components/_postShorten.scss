@@ -96,7 +96,7 @@
             margin: 5px 0 30px 15px;
 
             img {
-                display:    block;
+                display:    inherit;
                 width:      $post-thumbnail-image-width;
                 height:     $post-thumbnail-image-width;
                 object-fit: scale-down;
@@ -151,5 +151,15 @@
                 height: auto;
             }
         }
+    }
+    .postShorten-thumbnailimg-horizontal {
+        max-width: $post-thumbnail-image-width;
+    }
+    .postShorten-thumbnailimg-vertical {
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: $post-thumbnail-image-width;
+        max-height: $post-thumbnail-image-width;
+        white-space: nowrap;
     }
 }
