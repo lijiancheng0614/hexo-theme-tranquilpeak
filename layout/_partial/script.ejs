@@ -2,10 +2,11 @@
 <%- js('assets/js/jquery.js') %>
 <%- js('assets/js/jquery.fancybox.js') %>
 <%- js('assets/js/tranquilpeak.js') %>
+<!--SCRIPTS END-->
+
 <!-- MathJax Begin -->
 <%- partial('mathjax') %>
 <!-- MathJax End -->
-<%- partial('backtotop') %>
 <% if (is_post() && theme.sharing_options.weixin) { %>
     <script type="text/javascript">
         $('#qrcode').qrcode({
@@ -59,4 +60,3 @@
         var algoliaIndex = algoliaClient.initIndex('<%= config.algolia.indexName %>');
     </script>
 <% } %>
-<!--SCRIPTS END-->

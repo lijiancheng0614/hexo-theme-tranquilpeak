@@ -1,5 +1,5 @@
-<script>
-var bigfa_scroll = {
+(function($) {
+  var bigfa_scroll = {
     drawCircle: function(id, percentage, color) {
         var width = jQuery(id).width();
         var height = jQuery(id).height();
@@ -59,12 +59,8 @@ var bigfa_scroll = {
 
         });
     }
-}
-
-jQuery(document).ready(function() {
-    jQuery("body").append('<div id="backtoTop" data-action="gototop"><canvas id="backtoTopCanvas" width="48" height="48"></canvas><div class="per"></div></div>');
-    var T = bigfa_scroll;
-    T.backToTop(jQuery("#backtoTop"));
-    T.scrollHook(jQuery(window), "#99ccff");
-});
-</script>
+  }
+  jQuery("body").append('<div id="backtoTop" data-action="gototop"><canvas id="backtoTopCanvas" width="48" height="48"></canvas><div class="per"></div></div>');
+  bigfa_scroll.backToTop(jQuery("#backtoTop"));
+  bigfa_scroll.scrollHook(jQuery(window), "#99ccff");
+})(jQuery);
