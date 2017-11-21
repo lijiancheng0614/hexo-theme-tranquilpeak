@@ -12,9 +12,7 @@
         $('#qrcode').qrcode({
             text: "<%= post.permalink %>"
         });
-        $("#show_qrcode").fancybox({
-            title : "<%= __('global.share_on_weixin') %>"
-        });
+        $("#show_qrcode").fancybox();
     </script>
 <% } %>
 </script>
