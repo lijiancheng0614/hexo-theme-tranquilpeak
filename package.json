@@ -45,8 +45,7 @@
     "grunt-text-replace": "^0.4.0",
     "hexo-renderer-marked": "^0.2.10",
     "include-all": "^0.1.6",
-    "load-grunt-tasks": "~0.2.0",
-    "rand-token": "^0.2.1"
+    "load-grunt-tasks": "~0.2.0"
   },
   "dependencies": {
     "async": "^1.5.2",
