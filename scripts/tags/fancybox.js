@@ -29,7 +29,7 @@ hexo.extend.tag.register('fancybox', function(args) {
 
   var title = args.join(' ');
   
-  return '<a class="fancybox" href="' + original + '" title="' + title + '">' +
+  return '<a class="fancybox" href="' + original + '"data-fancybox="images" data-caption="' + title + '">' +
     '<img class="' + cssClass + '" src="' + (thumbnail || original) + '" alt="' + title + '">' +
     '</a>' +
     (title && cssClass !== 'inline' ? '<span class="caption">' + title + '</span>' : '');

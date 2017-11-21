@@ -26,16 +26,8 @@ module.exports = function(grunt) {
           },
           fancybox: {
             files: [
-              'source/blank.gif',
-              'source/fancybox_loading.gif',
-              'source/fancybox_loading@2x.gif',
-              'source/fancybox_overlay.png',
-              'source/fancybox_sprite.png',
-              'source/fancybox_sprite@2x.png',
-              'source/jquery.fancybox.js',
-              'source/jquery.fancybox.css',
-              'source/helpers/jquery.fancybox-thumbs.css',
-              'source/helpers/jquery.fancybox-thumbs.js'
+              'dist/jquery.fancybox.css',
+              'dist/jquery.fancybox.js'
             ]
           }
         }
