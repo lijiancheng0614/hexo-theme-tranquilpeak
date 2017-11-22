@@ -1,11 +1,14 @@
 a.tag,
 .tag {
-    display:        inline-block;
     background:     #fff;
     width:          auto;
     height:         auto;
     border-radius:  3px;
     letter-spacing: $letter-spacing-base;
+}
+
+a.tag {
+    display:        inline-block;
     cursor:         pointer;
     margin:         0;
     margin-right:   4px;
